@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <!--Anja Milutin AI20/2021 Ivana Bajić AI25/2021 Katarina Baturan AI26/2021-->
+<head>
+    <title>Our Cinema - Projection Rooms</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+</head>
+
+<script>
+    // show image when we click on a image
+function showImage(imageSrc) {
+let popupImage = document.getElementById("popupImage");
+popupImage.src = imageSrc;
+
+let imagePopup = document.getElementById("imagePopup");
+imagePopup.style.display = "block";
+document.body.style.overflow = "hidden";
+}
+// hide the image when we click x
+function closeImage() {
+let imagePopup = document.getElementById("imagePopup");
+imagePopup.style.display = "none";
+document.body.style.overflow = "auto";
+}
+
+</script>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navigacija">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="slike/logonov.png" width="30" height="30" alt="Cinema Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="repertoar.html">Repertoar</a></li>
+                <li class="nav-item"><a class="nav-link" href="comingsoon.html">Coming Soon</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="services.html">Services</a>
+                        <a class="dropdown-item" href="gallery.html">Gallery</a>
+                        <a class="dropdown-item" href="sponsors.html">Sponsor Page</a>
+                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                    </div>
+                </li>
+                <form class="d-flex ">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                  </form>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+    <!-- Main Content -->
+    <div class="container mt-4" >
+        <h1>Our Projection Rooms</h1>
+        <div class="gallery">
+
+        <!-- Room One -->
+        <div class="room-header">
+            <h2>Projection Room 1:</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="slike/sala11.jpg" class="room-image" alt="Room One Image" onclick="showImage(src)"></a>
+                <p>Projection room 1 - ENTERIOR</p>
+            </div>
+            <div class="col-md-6">
+                <img src="slike/prva_sala.jpg" class="room-image" alt="Room One Image " onclick="showImage(src)">
+                <p>Projection Room 1 - SEAT PLAN</p>
+                </div>
+            </div>
+        
+
+        <!-- Room Two -->
+        <div class="room-header">
+            <h2>Projection Room 2:</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="slike/sala22.jpg" class="room-image" alt="Room Two Image" onclick="showImage(src)">
+                <p>Projection room 2 - ENTERIOR</p>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <img src="slike/sala-2.png" class="room-image" alt="Room Two Image" onclick="showImage(src)">
+                <p>Projection Room 2 - SEAT PLAN</p>
+                </div>
+            </div>
+        
+        <!-- Room Three -->
+        <div class="room-header">
+            <h2>Projection Room 3:</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="slike/sala44.jpg" class="room-image" alt="Room Three Image" onclick="showImage(src)">
+                <p>Projection room 3 - ENTERIOR</p>
+            </div>
+            <div class="col-md-6">
+                <img src="slike/sala-4.png" class="room-image" alt="Room Three Image" onclick="showImage(src)">
+                <p>Projection Room 3 - SEAT PLAN</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="image-popup-container" id="imagePopup">
+                <span class="close-button" onclick="closeImage()">×</span>
+                <img src="" alt="Popup Image" id="popupImage">
+        </div>
+        <script src="script.js"></script>
+   
+
+
+            
+        <div class="social-buttons-container">
+            <a href="https://twitter.com/">
+            <img src="slike/twitter.png"  alt="Twitter" class="social-button">
+            </a>
+            <a href="https://www.instagram.com/">
+            <img src="slike/instagram.png" alt="Instagram" class="social-button">
+            </a>
+            <a href="https://www.facebook.com/">
+            <img src="slike/fb.png" alt="Facebook" class="social-button">
+            </a>
+        </div>
+    
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="footerr">
+            <span class="text-muted">Contact us at:</span>
+            <a href="mailto:cineverse@gmail.com">cineverse@gmail.com</a>
+        </div>
+    </footer>
+
+
+
+    
+</body>
+</html>

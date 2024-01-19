@@ -1,0 +1,265 @@
+body {
+    background-image: url(slike/backgroundd.png);
+    color: white;
+    background-color: azure;
+}
+
+
+.Zaglavlje{
+ 
+    width: 100%;
+    height: 200px;
+    line-height: 300px;
+    background-image: url(slike/CineVerse\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+ 
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    padding: 20px 20px;
+    position: fixed;
+    bottom: 0px;
+    opacity: 0.8;
+  }
+
+  .footer a{
+    text-decoration: none;
+    color: black;
+    font-family: Nunito;
+  }
+
+
+.navbar-nav li:hover {
+    background: gray;
+}
+
+
+.social-buttons-container {
+    position: fixed;
+    bottom: 240px; 
+    left: 20px; 
+    z-index: 1000; 
+
+}
+
+.social-button {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    display: block;
+}
+
+.social-button:hover {
+    background-color: darkblue;
+    opacity: 0.5;
+}
+
+
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+    margin-inline: auto;
+    max-width: 100%;
+    background:transparent;
+
+}
+
+ .gallery > img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.gallery p {
+    text-align: center;
+}
+
+
+.room-header {
+    padding: 10px;
+    margin-top: 55px;
+    margin-left: 130px;
+}
+
+.room-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.room-image:hover {
+    opacity: 0.5;
+}
+
+.contact-header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.showtimes {
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.movie-card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+
+.pricing-header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.pricing-table {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.dan {
+    padding: 60px;
+    margin-top: 40px;
+}
+
+
+.dan a {
+    background-color: white;
+    opacity: 0.5;
+}
+
+.btn {
+    margin-right: 30px;
+}
+
+.container {
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+.container h1 {
+    margin: 70px;
+    text-align: center;
+}
+
+.sat {
+    margin: 80px ;
+    position: absolute; top: 0px; right: 0px; 
+    text-align: center;
+}
+
+.container-showtimes h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body p {
+    color: #333;
+}
+
+.card-body h2 {
+    color: #333;
+    text-align: center;
+}
+
+
+.button {
+    margin-left: 250px;
+    opacity: 0.5;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: yellow;
+    opacity: 1;
+    transform: scale(1.05);
+
+}
+
+
+.image-popup-container {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close-button {
+	position: absolute;
+	top: 40px;
+	right: 50px;
+	font-size:60px;
+	color: #fff;
+	cursor: pointer;
+}
+.close-button:hover{
+	color: rgb(156, 156, 156);
+}
+
+/* za iskakanje */
+#popupImage {
+	display: block;
+	max-width: 80%;
+	max-height: 80%;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

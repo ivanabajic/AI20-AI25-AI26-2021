@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <!--Anja Milutin AI20/2021 Ivana Bajić AI25/2021 Katarina Baturan AI26/2021-->
+<head>
+    <title>Welcome to Our Cinema</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body onload="startTime()">
+    
+
+    <div class="Zaglavlje mt-4">
+       
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navigacija">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="slike/logonov.png" width="30" height="30" alt="Cinema Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="repertoar.html">Repertoar</a></li>
+                <li class="nav-item"><a class="nav-link" href="comingsoon.html">Coming Soon</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="services.html">Services</a>
+                        <a class="dropdown-item" href="gallery.html">Gallery</a>
+                        <a class="dropdown-item" href="sponsors.html">Sponsor Page</a>
+                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                    </div>
+                </li>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                  </form>
+            </ul>
+        </div>
+    </nav>
+    </div>
+   
+
+
+    <div class="sat">
+    <h2>Current time:</h2>
+
+    <div id="txt"></div>
+    
+    <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+    </div>
+
+    
+    <!-- Main Content -->
+
+    
+
+    <div class="slideshow mt-3">
+        <h1>Welcome to Our Cinema</h1>
+        <div id="featuredCarousel" class="carousel slide mt-4" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="slike/dzejj.png"  alt="Featured Movie 1" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="slike/sluga.jpg" alt="Featured Movie 2" class="d-block w-100">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+         <!-- Showtimes Section -->
+         <div class="container-showtimes mx-4 mb-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Currently available</h2>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="card movie-card">
+                                <img src="slike/kolaz.jpg" class="card-img-top" alt="Currently available">
+                                <div class="card-body">
+                                </div>
+                            </div>
+                        </div>
+                            <a href="repertoar.html" class="button btn-light btn-lg mb-5">See all active movies</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Coming soon</h2>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="card movie-card">
+                                <img src="slike/kolaz4.jpg" class="card-img-top" alt="Upcoming movies">
+                                <div class="card-body">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="comingsoon.html" class="button btn-light btn-lg mb-5">See all upcoming movies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+   
+
+<!-- Social Media -->
+    <div class="social-buttons-container">
+        <a href="https://twitter.com/">
+        <img src="slike/twitter.png"  alt="Twitter" class="social-button">
+        </a>
+        <a href="https://www.instagram.com/">
+        <img src="slike/instagram.png" alt="Instagram" class="social-button">
+        </a>
+        <a href="https://www.facebook.com/">
+        <img src="slike/fb.png" alt="Facebook" class="social-button">
+        </a>
+    </div>
+
+
+
+    <!-- Footer -->
+    
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="footerr">
+        <span class="text-muted">Contact us at:</span>
+        <a href="mailto:cineverse@gmail.com">cineverse@gmail.com</a>
+    </div>
+</footer>
+
+</body>
+</html>
+
